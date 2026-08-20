@@ -190,44 +190,101 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero{
-    padding:180px 0 120px;
-    position:relative;
-    overflow:hidden;
-    background:
-      radial-gradient(ellipse 900px 500px at 85% -10%, var(--indigo-soft), transparent 60%);
-  }
-  .hero-grid{
-    display:grid; grid-template-columns:1.05fr 0.95fr; gap:60px; align-items:center;
-  }
-  .hero h1{
-    font-size:clamp(38px, 5.2vw, 64px);
-    font-weight:600;
-    color:#fff;
-  }
-  .hero h1 span{ color:var(--indigo); }
-  .hero-sub{
-    margin-top:24px; font-size:18px; color:var(--paper-dim); max-width:520px;
-  }
-  .hero-actions{ margin-top:38px; display:flex; gap:16px; flex-wrap:wrap; }
-  .hero-meta{
-    margin-top:56px; display:flex; gap:32px; flex-wrap:wrap;
-  }
-  .hero-meta div{ font-family:var(--mono); font-size:12.5px; color:var(--slate); letter-spacing:0.04em; }
-  .hero-meta strong{ display:block; color:var(--paper); font-family:var(--body); font-size:14.5px; font-weight:600; margin-bottom:4px; }
+/* ---------- HERO ---------- */
+.hero{
+  padding:180px 0 60px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse 900px 500px at 85% -10%, var(--indigo-soft), transparent 60%);
+}
 
-  .loom{ width:100%; height:auto; }
-  @media (max-width:940px){
-    .hero{ padding:150px 0 80px; }
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero-sub{ max-width:none; }
-    .loom-wrap{ order:-1; margin-bottom:10px; }
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  gap:60px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:clamp(38px, 5.2vw, 64px);
+  font-weight:600;
+  color:#fff;
+}
+
+.hero h1 span{
+  color:var(--indigo);
+}
+
+.hero-sub{
+  margin-top:24px;
+  font-size:18px;
+  color:var(--paper-dim);
+  max-width:520px;
+}
+
+.hero-actions{
+  margin-top:38px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.hero-meta{
+  margin-top:56px;
+  display:flex;
+  gap:32px;
+  flex-wrap:wrap;
+}
+
+.hero-meta div{
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--slate);
+  letter-spacing:0.04em;
+}
+
+.hero-meta strong{
+  display:block;
+  color:var(--paper);
+  font-family:var(--body);
+  font-size:14.5px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+@media (max-width:940px){
+  .hero{
+    padding:150px 0 60px;
   }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-sub{
+    max-width:none;
+  }
+}
 
   /* ---------- section headers ---------- */
-  .sec-head{ max-width:640px; margin-bottom:64px; }
-  .sec-head h2{ font-size:clamp(28px,3.6vw,42px); font-weight:600; color:#fff; }
-  .sec-head p{ margin-top:16px; font-size:17px; color:var(--paper-dim); }
+ /* ---------- SECTION HEADERS ---------- */
+.sec-head{
+  max-width:640px;
+  margin-bottom:40px;
+}
+
+.sec-head h2{
+  font-size:clamp(28px,3.6vw,42px);
+  font-weight:600;
+  color:#fff;
+}
+
+.sec-head p{
+  margin-top:16px;
+  font-size:17px;
+  color:var(--paper-dim);
+}
 
   /* ---------- SERVICES ---------- */
   .services-grid{
@@ -245,7 +302,10 @@
   @media (max-width:640px){ .services-grid{ grid-template-columns:1fr; } }
 
   /* ---------- PROCESS ---------- */
-  .process{ position:relative; }
+  .process{
+  position:relative;
+  padding-bottom:40px;
+}
   .process-list{ display:grid; grid-template-columns:repeat(5,1fr); gap:0; position:relative; }
   .process-list::before{
     content:""; position:absolute; top:26px; left:0; right:0; height:1px;
@@ -264,6 +324,11 @@
     .process-list::before{ display:none; }
   }
   @media (max-width:560px){ .process-list{ grid-template-columns:1fr; } }
+
+  .process{
+  position:relative;
+  padding-bottom:40px;
+}
 
   /* ---------- WORK ---------- */
   .work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
@@ -468,44 +533,7 @@
         </div>
       </div>
 
-      <div class="loom-wrap">
-        <svg class="loom" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated illustration of woven threads intersecting at glowing nodes, representing digital solutions being built">
-          <defs>
-            <linearGradient id="threadGrad" x1="0" y1="0" x2="480" y2="480" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#4C6FFF"/>
-              <stop offset="1" stop-color="#8AA0FF"/>
-            </linearGradient>
-          </defs>
-          <g stroke="url(#threadGrad)" stroke-width="1.1" opacity="0.55">
-            <line x1="0" y1="60" x2="480" y2="60"/>
-            <line x1="0" y1="140" x2="480" y2="140"/>
-            <line x1="0" y1="220" x2="480" y2="220"/>
-            <line x1="0" y1="300" x2="480" y2="300"/>
-            <line x1="0" y1="380" x2="480" y2="380"/>
-            <line x1="60" y1="0" x2="60" y2="480"/>
-            <line x1="140" y1="0" x2="140" y2="480"/>
-            <line x1="220" y1="0" x2="220" y2="480"/>
-            <line x1="300" y1="0" x2="300" y2="480"/>
-            <line x1="380" y1="0" x2="380" y2="480"/>
-          </g>
-          <g class="weave-diag" stroke="#F2B035" stroke-width="1.4" opacity="0.5">
-            <line x1="0" y1="0" x2="480" y2="480"/>
-            <line x1="120" y1="0" x2="480" y2="360"/>
-            <line x1="0" y1="120" x2="360" y2="480"/>
-          </g>
-          <g fill="#4C6FFF">
-            <circle cx="60" cy="60" r="4"><animate attributeName="r" values="4;7;4" dur="3.2s" repeatCount="indefinite"/></circle>
-            <circle cx="220" cy="140" r="4"><animate attributeName="r" values="4;7;4" dur="2.6s" begin="0.4s" repeatCount="indefinite"/></circle>
-            <circle cx="380" cy="60" r="4"><animate attributeName="r" values="4;7;4" dur="3.6s" begin="0.9s" repeatCount="indefinite"/></circle>
-            <circle cx="140" cy="300" r="4"><animate attributeName="r" values="4;7;4" dur="2.9s" begin="1.3s" repeatCount="indefinite"/></circle>
-            <circle cx="300" cy="380" r="5" fill="#F2B035"><animate attributeName="r" values="5;9;5" dur="3.1s" begin="0.2s" repeatCount="indefinite"/></circle>
-            <circle cx="380" cy="220" r="4"><animate attributeName="r" values="4;7;4" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></circle>
-            <circle cx="60" cy="380" r="4"><animate attributeName="r" values="4;7;4" dur="3.4s" begin="0.6s" repeatCount="indefinite"/></circle>
-          </g>
-          <text x="240" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#EDEFF5" opacity="0.6" letter-spacing="2">WEBLORA</text>
-        </svg>
-      </div>
-    </div>
+     
   </section>
 
   <!-- SERVICES -->
