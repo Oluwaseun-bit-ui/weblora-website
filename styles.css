@@ -254,6 +254,24 @@
   .service-icon{ width:38px; height:38px; color:var(--indigo); margin-bottom:22px; }
   .service-card h3{ font-size:19px; font-weight:600; color:#fff; margin-bottom:10px; }
   .service-card p{ font-size:14.5px; color:var(--slate); line-height:1.65; }
+  /* ---------- PRICING ---------- */
+  .pricing-section{ padding-top:40px; }
+  .pricing-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .price-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:32px 30px;
+    display:flex; flex-direction:column; transition:border-color .25s var(--ease);
+  }
+  .price-card:hover{ border-color:var(--line-strong); }
+  .price-card h3{ font-size:18px; font-weight:600; color:#fff; }
+  .price-amount{ margin:16px 0 18px; padding-bottom:18px; border-bottom:1px solid var(--line); display:flex; align-items:baseline; gap:8px; }
+  .price-amount .price-from{ font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--slate); }
+  .price-amount strong{ font-family:var(--display); font-size:30px; font-weight:600; color:var(--amber); line-height:1; }
+  .price-card p{ font-size:14.5px; color:var(--slate); line-height:1.65; }
+  .price-card-cta{ background:linear-gradient(135deg, var(--indigo-soft), var(--panel)); border-color:rgba(76,111,255,0.4); }
+  .price-card-cta p{ margin:12px 0 24px; color:var(--paper-dim); }
+  .price-card-cta .btn{ margin-top:auto; align-self:flex-start; }
+  @media (max-width:900px){ .pricing-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ .pricing-grid{ grid-template-columns:1fr; } }
   @media (max-width:900px){ .services-grid{ grid-template-columns:1fr 1fr; } }
   @media (max-width:640px){ .services-grid{ grid-template-columns:1fr; } }
 
@@ -292,12 +310,34 @@
   }
   .work-card h4{ font-size:18px; color:#fff; font-weight:600; margin:16px 0 8px; }
   .work-card p{ font-size:13.5px; color:var(--slate); line-height:1.6; }
+  .work-story{ margin:0; display:grid; gap:4px; }
+  .work-story dt{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--indigo);
+  }
+  .work-story dt:not(:first-child){ margin-top:10px; }
+  .work-story dd{ margin:0; font-size:13.5px; color:var(--slate); line-height:1.6; }
   .work-note{
     margin-top:36px; padding:22px 26px; border-radius:var(--radius); background:var(--panel);
     border:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
   }
   .work-note p{ font-size:14.5px; color:var(--paper-dim); max-width:520px; }
   @media (max-width:640px){ .work-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonial-section{ padding-top:40px; }
+  .work-testimonial{ margin-top:36px; }
+  .testimonial{
+    margin:0; max-width:860px; padding:40px 44px; border-radius:var(--radius);
+    background:linear-gradient(135deg, var(--indigo-soft), var(--panel)); border:1px solid rgba(76,111,255,0.35);
+  }
+  .testimonial .stars{ display:flex; gap:4px; color:var(--amber); margin-bottom:20px; }
+  .testimonial .stars svg{ width:20px; height:20px; }
+  .testimonial blockquote{ margin:0; }
+  .testimonial blockquote p{ font-family:var(--display); font-size:clamp(18px,2vw,22px); line-height:1.55; color:#fff; font-weight:500; }
+  .testimonial figcaption{ margin-top:24px; }
+  .testimonial figcaption strong{ display:block; color:#fff; font-size:15.5px; font-weight:600; }
+  .testimonial figcaption span{ display:block; margin-top:2px; font-family:var(--mono); font-size:12px; letter-spacing:0.04em; color:var(--slate); }
+  @media (max-width:640px){ .testimonial{ padding:28px 24px; } }
 
   /* ---------- ABOUT ---------- */
   .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:start; }
@@ -395,6 +435,18 @@
   .footer-socials a{ color:var(--slate); }
   .footer-socials a:hover{ color:var(--indigo); }
   .footer-socials svg{ width:19px; height:19px; }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float{
+    position:fixed; right:24px; bottom:24px; z-index:90;
+    width:58px; height:58px; border-radius:50%; background:#25D366; color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    transition:transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .wa-float:hover{ transform:translateY(-3px) scale(1.05); box-shadow:0 14px 36px rgba(37,211,102,0.35); }
+  .wa-float svg{ width:30px; height:30px; }
+  @media (max-width:640px){ .wa-float{ right:16px; bottom:16px; width:54px; height:54px; } }
 
   /* skip link */
   .skip-link{
