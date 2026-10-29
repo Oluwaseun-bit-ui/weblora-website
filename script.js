@@ -61,7 +61,7 @@ if (projectForm) {
 // floating WhatsApp button (every page)
 const waButton = document.createElement('a');
 waButton.className = 'wa-float';
-waButton.href = 'https://wa.me/2349034850696?text=' + encodeURIComponent("Hi Weblora, I'd like to discuss a project.");
+waButton.href = 'https://wa.me/2349034850696';
 waButton.target = '_blank';
 waButton.rel = 'noopener';
 waButton.setAttribute('aria-label', 'Chat with us on WhatsApp');
